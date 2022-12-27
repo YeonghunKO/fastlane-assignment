@@ -1,16 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-
 const GlobalStyle = createGlobalStyle`
+
     *{
-        box-sizing:border-box;
-    }
-    ${reset};
+        box-sizing:border-box;    
+     }
+
+     ${reset};
+
     body{
         padding: 0;
         margin: 0;
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Barlow Condensed',sans-serif;
     };
+
     button,input{
         border:0;
         cursor: pointer;
