@@ -1,11 +1,12 @@
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
 import type { IssueType } from 'type/issue';
 import type { AxiosError } from 'axios';
 import { gitHubIssueService } from 'NetWork/gitHubIssueService';
 
 const useInfiniteQueryScroll = () => {
+  const queryClient = useQueryClient();
   return useInfiniteQuery<
-    { issues: IssueType[]; nextId: number | undefined },
+    { issues: IssueType[] | undefined; nextId: number | undefined },
     AxiosError<any>
   >(
     ['issues'],
@@ -23,6 +24,23 @@ const useInfiniteQueryScroll = () => {
       };
     },
     {
+      initialData: () => {
+        const queryCacheData = queryClient.getQueryState<
+          IssueType[],
+          AxiosError<any>
+        >(['initIssues'])?.data;
+        if (queryCacheData) {
+          return {
+            pageParams: [undefined],
+            pages: [
+              {
+                issues: queryCacheData,
+                nextId: 2,
+              },
+            ],
+          };
+        }
+      },
       getNextPageParam: (lastPage, _pages) => lastPage.nextId,
     }
   );
