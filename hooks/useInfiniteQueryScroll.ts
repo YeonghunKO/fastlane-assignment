@@ -2,6 +2,7 @@ import { useInfiniteQuery, useQueryClient } from '@tanstack/react-query';
 import type { IssueType } from 'type/issue';
 import type { AxiosError } from 'axios';
 import { gitHubIssueService } from 'NetWork/gitHubIssueService';
+import { queryKeys } from 'constant/queryKeys';
 
 const useInfiniteQueryScroll = () => {
   const queryClient = useQueryClient();
@@ -9,7 +10,7 @@ const useInfiniteQueryScroll = () => {
     { issues: IssueType[] | undefined; nextId: number | undefined },
     AxiosError<any>
   >(
-    ['issues'],
+    queryKeys.issues,
     async ({ pageParam = 1 }) => {
       const MAX_PAGE = 6;
 
@@ -28,14 +29,14 @@ const useInfiniteQueryScroll = () => {
         const queryCacheData = queryClient.getQueryState<
           IssueType[],
           AxiosError<any>
-        >(['initIssues'])?.data;
+        >(queryKeys.initIssues)?.data;
         if (queryCacheData) {
           return {
             pageParams: [undefined],
             pages: [
               {
                 issues: queryCacheData,
-                nextId: 2,
+                nextId: 1,
               },
             ],
           };
