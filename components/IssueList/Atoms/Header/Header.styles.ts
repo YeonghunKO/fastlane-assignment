@@ -21,6 +21,8 @@ export const Container = styled.header`
 
   margin-bottom: 1rem;
 
+  transition: all 0.2s ease;
+
   @media ${DEVICE.sm} {
     width: 90%;
     font-size: 1rem;
