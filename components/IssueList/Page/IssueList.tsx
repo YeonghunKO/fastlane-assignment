@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Theme from '@components/particles/Theme';
 
