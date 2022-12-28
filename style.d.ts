@@ -5,7 +5,6 @@ declare module 'styled-components' {
     flexCenter: ThemedCssFunction;
     flexColumn: ThemedCssFunction;
 
-    white: '#ffffff';
     offWhite: '#F0F0F0';
 
     grey: '#a6acb0';
@@ -21,6 +20,8 @@ declare module 'styled-components' {
 
     secondary: '#54d75f';
 
+    /* light mode */
+    backgroundColor: '#ffffff' | string;
     boxBackground: '#f4f4f4' | string;
     title: '#21262d' | string;
     subtitle: '#6e737b' | string;
@@ -28,10 +29,10 @@ declare module 'styled-components' {
   }
 
   export interface DarkModeTheme extends DefaultTheme {
-    backgroundColor: '#434953' | string;
-    boxBackground: '#21262d' | string;
+    backgroundColor: '#21262d' | string;
+    boxBackground: '#434953' | string;
     title: '#f4f4f4' | string;
-    subtitle: '#9c9fa5' | string;
-    boxHoverColor: '#434953' | string;
+    subtitle: '#bcbcbd' | string;
+    boxHoverColor: '#727272' | string;
   }
 }

@@ -13,7 +13,7 @@ const Theme: DefaultTheme = {
   `,
 
   /* Colours */
-  white: '#ffffff',
+
   offWhite: '#F0F0F0',
 
   grey: '#a6acb0',
@@ -30,8 +30,8 @@ const Theme: DefaultTheme = {
   tertiary: '#de4536',
 
   /* light mode */
+  backgroundColor: '#ffffff',
   boxBackground: '#f4f4f4',
-
   title: '#21262d',
   subtitle: '#6e737b',
   boxHoverColor: '#e6e6e6',
@@ -41,11 +41,11 @@ export const DarkTheme: DarkModeTheme = {
   ...Theme,
 
   /* dark mode */
-  backgroundColor: '#434953',
-  boxBackground: '#21262d',
+  backgroundColor: '#21262d',
+  boxBackground: '#434953',
   title: '#f4f4f4',
-  subtitle: '#9c9fa5',
-  boxHoverColor: '#434953',
+  subtitle: '#bcbcbd',
+  boxHoverColor: '#727272',
 };
 
 export default Theme;
