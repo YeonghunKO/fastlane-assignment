@@ -34,7 +34,6 @@ const withThemeProvider = Story => {
       <GlobalStyles />
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={true} />
-
         <Story />
       </QueryClientProvider>
     </ThemeProvider>
