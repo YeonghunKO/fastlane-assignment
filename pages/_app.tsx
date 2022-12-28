@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
-import Theme from '@components/particles/Theme';
+import Theme, { DarkTheme } from '@components/particles/Theme';
 import GlobalStyle from '@components/particles/GlobalStyles';
 import {
   QueryClient,

@@ -20,5 +20,18 @@ declare module 'styled-components' {
     tertiary: '#de4536';
 
     secondary: '#54d75f';
+
+    boxBackground: '#f4f4f4' | string;
+    title: '#21262d' | string;
+    subtitle: '#6e737b' | string;
+    boxHoverColor: '#e6e6e6' | string;
+  }
+
+  export interface DarkModeTheme extends DefaultTheme {
+    backgroundColor: '#434953' | string;
+    boxBackground: '#21262d' | string;
+    title: '#f4f4f4' | string;
+    subtitle: '#9c9fa5' | string;
+    boxHoverColor: '#434953' | string;
   }
 }

@@ -5,7 +5,8 @@ export const Container = styled.header`
   justify-content: flex-start;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.primary300};
+  background-color: ${({ theme }) => theme.boxBackground};
+  color: ${({ theme }) => theme.title};
 
   font-family: 'Barlow Condensed', sans-serif;
 
