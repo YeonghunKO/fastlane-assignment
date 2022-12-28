@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=30d7d6cf801e"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.20.4",
@@ -44,8 +45,11 @@
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.3.0",
     "babel-plugin-styled-components": "^2.0.7",
+    "chromatic": "^6.14.0",
     "eslint-plugin-storybook": "^0.6.8",
     "sb": "^6.5.15",
     "webpack": "^5.75.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "fastlane-assignment@0.1.0"
 }
