@@ -1,5 +1,5 @@
 import Icon from '@components/common/Atoms/Icons/Icon';
-import React from 'react';
+import React, { memo } from 'react';
 import { dateConverter } from 'utils/dateConverter';
 import * as S from './Issue.styles';
 import type { IssueComponentType } from './type';
@@ -21,10 +21,10 @@ const Issue = ({
       </S.Info>
       <S.Comments>
         <Icon icon="Comment" />
-        <div>{comments}</div>
+        <S.CommentNumber>{comments}</S.CommentNumber>
       </S.Comments>
     </S.Container>
   );
 };
 
-export default Issue;
+export default memo(Issue);
