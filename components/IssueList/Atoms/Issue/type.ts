@@ -3,6 +3,7 @@ interface IssueComponentType {
   number: number;
   updated_at: string;
   comments: number;
+  html_url: string;
 }
 
 export type { IssueComponentType };
