@@ -1,3 +1,4 @@
+import { DEVICE } from 'constant/mediaQueries';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -19,4 +20,9 @@ export const Container = styled.header`
   font-size: 1.5rem;
 
   margin-bottom: 1rem;
+
+  @media ${DEVICE.sm} {
+    width: 90%;
+    font-size: 1rem;
+  }
 `;

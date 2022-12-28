@@ -1,3 +1,4 @@
+import { DEVICE } from 'constant/mediaQueries';
 import styled from 'styled-components';
 
 export const Container = styled.a`
@@ -25,6 +26,10 @@ export const Container = styled.a`
   }
 
   margin-bottom: 1rem;
+
+  @media ${DEVICE.sm} {
+    height: 5rem;
+  }
 `;
 
 export const Info = styled.div`
@@ -32,6 +37,12 @@ export const Info = styled.div`
   width: 90%;
   height: 100%;
   gap: 0.5rem;
+
+  @media ${DEVICE.sm} {
+    width: 87%;
+    font-size: 0.9rem;
+    height: 85%;
+  }
 `;
 
 export const MainInfo = styled.h1`
@@ -53,4 +64,14 @@ export const Comments = styled.div`
   color: ${({ theme }) => theme.subtitle};
   width: 10%;
   font-size: 0.7em;
+
+  @media ${DEVICE.sm} {
+    width: 13%;
+    font-size: 0.5em;
+    height: 65%;
+  }
+`;
+
+export const CommentNumber = styled.span`
+  width: 50%;
 `;
