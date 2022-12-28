@@ -154,4 +154,6 @@ https://github.com/YeonghunKO/fastlane-assignment/blob/8b32b4fd0dcc9b18c19f7c036
 | refactor | 코드 리팩토링                |
 | hotfix   | 치명적이거나 급한 버그 수정  |
 
-
+# 🤔회고
+: 맞닥뜨린에러나 총평을 적어보았습니다.
+[회고 글 보러가기](https://velog.io/@yhko1992/fastlane-%EA%B8%B0%EC%97%85%EA%B3%BC%EC%A0%9C%EA%B9%83%ED%97%99-%EC%9D%B4%EC%8A%88-%EC%B6%94%EC%B6%9C)
